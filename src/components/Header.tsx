@@ -40,9 +40,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">K</span>
-            </div>
+            <img 
+              src="https://kimc.ac.ke/wp-content/themes/kimc-main/assets/images/logo.png" 
+              alt="KIMC Logo" 
+              className="h-14 w-auto" 
+            />
             <div className="hidden md:block">
               <h1 className="text-xl font-bold text-primary">KIMC</h1>
               <p className="text-sm text-muted-foreground">Kenya Institute of Mass Communication</p>

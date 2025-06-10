@@ -87,8 +87,8 @@ const Academics = () => {
   ];
 
   return (
-    <section id="academics" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="academics" className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Academic Programs
@@ -98,24 +98,46 @@ const Academics = () => {
           </p>
         </div>
 
+        {/* Featured Image */}
+        <div className="mb-16 relative rounded-xl overflow-hidden">
+          <img 
+            src="https://kimc.ac.ke/wp-content/uploads/2022/12/IMG_1174-1024x683.jpg" 
+            alt="KIMC Academic Programs"
+            className="w-full h-96 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
+            <div className="p-8 md:p-16 max-w-xl">
+              <Badge className="mb-4 bg-accent text-primary">Programs</Badge>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">World-Class Media Education</h3>
+              <p className="text-white/90 text-lg mb-6">
+                Our programs are designed with input from industry leaders to ensure graduates are ready for the demands of the modern media landscape.
+              </p>
+              <Button className="bg-white text-primary hover:bg-white/90">
+                View All Programs
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
         {/* Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-6 h-6 text-primary" />
+            <Card key={index} className="p-8 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <feature.icon className="w-8 h-8 text-primary" />
               </div>
-              <h4 className="text-lg font-semibold text-primary mb-2">{feature.title}</h4>
-              <p className="text-gray-600 text-sm">{feature.description}</p>
+              <h4 className="text-xl font-semibold text-primary mb-3">{feature.title}</h4>
+              <p className="text-gray-600">{feature.description}</p>
             </Card>
           ))}
         </div>
 
         {/* Programs */}
-        <div className="space-y-12">
+        <div className="space-y-20">
           {programs.map((program, programIndex) => (
             <div key={programIndex}>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-10">
                 <div>
                   <h3 className="text-3xl font-semibold text-primary mb-2">{program.level}</h3>
                   <p className="text-muted-foreground">Duration: {program.duration}</p>
@@ -126,26 +148,29 @@ const Academics = () => {
                 </Button>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {program.courses.map((course, courseIndex) => (
-                  <Card key={courseIndex} className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <Badge variant="secondary" className="text-xs">
-                        {course.mode}
-                      </Badge>
-                      <span className="text-sm text-muted-foreground">{course.duration}</span>
-                    </div>
-                    
-                    <h4 className="text-xl font-semibold text-primary mb-3">{course.title}</h4>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{course.description}</p>
-                    
-                    <div className="flex items-center justify-between pt-4 border-t">
-                      <Button variant="outline" size="sm">
-                        Learn More
-                      </Button>
-                      <Button size="sm" className="bg-primary hover:bg-primary/90">
-                        Apply Now
-                      </Button>
+                  <Card key={courseIndex} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                    <div className="h-3 bg-primary"></div>
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <Badge variant="secondary" className="text-xs">
+                          {course.mode}
+                        </Badge>
+                        <span className="text-sm text-muted-foreground">{course.duration}</span>
+                      </div>
+                      
+                      <h4 className="text-xl font-semibold text-primary mb-3">{course.title}</h4>
+                      <p className="text-gray-600 mb-6 leading-relaxed">{course.description}</p>
+                      
+                      <div className="flex items-center justify-between pt-4 border-t">
+                        <Button variant="outline" size="sm">
+                          Learn More
+                        </Button>
+                        <Button size="sm" className="bg-primary hover:bg-primary/90">
+                          Apply Now
+                        </Button>
+                      </div>
                     </div>
                   </Card>
                 ))}
@@ -155,20 +180,27 @@ const Academics = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <Card className="p-8 bg-gradient-to-r from-primary to-blue-600 text-white">
-            <h3 className="text-2xl font-semibold mb-4">Ready to Start Your Media Career?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join thousands of successful graduates who have built their careers through KIMC's 
-              comprehensive programs and industry connections.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary">
-                Apply for Admission
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Download Brochure
-              </Button>
+        <div className="mt-20">
+          <Card className="p-8 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl overflow-hidden relative">
+            <img 
+              src="https://kimc.ac.ke/wp-content/uploads/2022/12/DSC_9739-1024x678.jpg" 
+              alt="KIMC Campus"
+              className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-20"
+            />
+            <div className="relative z-10 max-w-3xl mx-auto text-center">
+              <h3 className="text-3xl font-semibold mb-6">Ready to Start Your Media Career?</h3>
+              <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
+                Join thousands of successful graduates who have built their careers through KIMC's 
+                comprehensive programs and industry connections.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary">
+                  Apply for Admission
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  Download Brochure
+                </Button>
+              </div>
             </div>
           </Card>
         </div>

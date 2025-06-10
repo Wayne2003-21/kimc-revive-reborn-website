@@ -17,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* KIMC Brand Colors */
-    --primary: 212 100% 30%; /* KIMC Blue */
+    /* KIMC Brand Colors - Updated based on their website */
+    --primary: 205 100% 21%; /* KIMC Dark Blue */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -27,7 +27,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 43 96% 56%; /* Gold accent */
+    --accent: 45 100% 50%; /* Gold accent from KIMC website */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,14 +35,14 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 212 100% 30%;
+    --ring: 205 100% 21%;
 
     --radius: 0.75rem;
 
     /* Custom KIMC Variables */
-    --kimc-blue: 212 100% 30%;
-    --kimc-light-blue: 212 100% 45%;
-    --kimc-gold: 43 96% 56%;
+    --kimc-blue: 205 100% 21%;
+    --kimc-light-blue: 205 100% 40%;
+    --kimc-gold: 45 100% 50%;
     --kimc-dark: 222.2 84% 4.9%;
     --kimc-gray: 215.4 16.3% 46.9%;
   }
@@ -54,13 +54,13 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 212 100% 45%;
+    --primary: 205 100% 40%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 43 96% 56%;
+    --accent: 45 100% 50%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
