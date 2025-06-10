@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, Clock, Users, Award, ArrowRight } from 'lucide-react';
+import { BookOpen, Clock, Users, Award, ArrowRight, GraduationCap, Globe } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -9,29 +9,41 @@ const Academics = () => {
   const programs = [
     {
       level: 'Diploma Programs',
-      duration: '2-3 Years',
+      duration: '3 Years',
       courses: [
         {
-          title: 'Diploma in Journalism',
-          description: 'Comprehensive training in news gathering, writing, and media ethics.',
+          title: 'Diploma in Journalism and Mass Communication',
+          description: 'Comprehensive training in news gathering, writing, editing, and media ethics for print, broadcast, and digital platforms.',
           duration: '3 Years',
           mode: 'Full-time'
         },
         {
           title: 'Diploma in Public Relations',
-          description: 'Strategic communication and relationship management skills.',
+          description: 'Strategic communication, relationship management, crisis communication, and corporate image building.',
           duration: '3 Years',
           mode: 'Full-time'
         },
         {
-          title: 'Diploma in Film and TV Production',
-          description: 'Hands-on training in visual storytelling and production.',
+          title: 'Diploma in Film and Television Production',
+          description: 'Hands-on training in visual storytelling, video production, editing, and broadcast technology.',
           duration: '3 Years',
           mode: 'Full-time'
         },
         {
-          title: 'Diploma in Advertising',
-          description: 'Creative and strategic approaches to brand communication.',
+          title: 'Diploma in Advertising and Marketing Communication',
+          description: 'Creative and strategic approaches to brand communication, digital marketing, and consumer behavior.',
+          duration: '3 Years',
+          mode: 'Full-time'
+        },
+        {
+          title: 'Diploma in Information and Communication Technology',
+          description: 'Modern ICT skills including software development, network management, and digital systems.',
+          duration: '3 Years',
+          mode: 'Full-time'
+        },
+        {
+          title: 'Diploma in Records and Archives Management',
+          description: 'Professional training in information management, archival science, and data preservation.',
           duration: '3 Years',
           mode: 'Full-time'
         }
@@ -43,20 +55,56 @@ const Academics = () => {
       courses: [
         {
           title: 'Certificate in Journalism',
-          description: 'Foundation course in news writing and reporting.',
+          description: 'Foundation course in news writing, reporting, and basic media ethics.',
           duration: '1 Year',
           mode: 'Full-time'
         },
         {
-          title: 'Certificate in Radio Production',
-          description: 'Specialized training in radio broadcasting and production.',
+          title: 'Certificate in Radio Production and Presentation',
+          description: 'Specialized training in radio broadcasting, production techniques, and presentation skills.',
           duration: '1 Year',
           mode: 'Full-time'
         },
         {
-          title: 'Certificate in Photography',
-          description: 'Professional photography techniques and digital imaging.',
+          title: 'Certificate in Photography and Videography',
+          description: 'Professional photography techniques, digital imaging, and video production basics.',
           duration: '6 Months',
+          mode: 'Part-time'
+        },
+        {
+          title: 'Certificate in Public Relations',
+          description: 'Basic PR principles, communication strategies, and media relations.',
+          duration: '1 Year',
+          mode: 'Full-time'
+        },
+        {
+          title: 'Certificate in Computer Applications',
+          description: 'Essential computer skills for the modern workplace including office applications.',
+          duration: '6 Months',
+          mode: 'Part-time'
+        }
+      ]
+    },
+    {
+      level: 'Short Courses',
+      duration: '1-6 Months',
+      courses: [
+        {
+          title: 'Digital Marketing',
+          description: 'Social media marketing, content creation, and online brand management.',
+          duration: '3 Months',
+          mode: 'Part-time'
+        },
+        {
+          title: 'Media Ethics and Law',
+          description: 'Understanding media regulations, ethics, and legal frameworks.',
+          duration: '2 Months',
+          mode: 'Part-time'
+        },
+        {
+          title: 'Event Management',
+          description: 'Planning and executing successful events and corporate functions.',
+          duration: '2 Months',
           mode: 'Part-time'
         }
       ]
@@ -67,22 +115,32 @@ const Academics = () => {
     {
       icon: Users,
       title: 'Expert Faculty',
-      description: 'Learn from industry professionals and experienced educators'
+      description: 'Learn from industry professionals and experienced educators with real-world experience'
     },
     {
       icon: BookOpen,
       title: 'Modern Curriculum',
-      description: 'Updated courses that meet current industry standards'
+      description: 'Updated courses that meet current industry standards and emerging trends'
     },
     {
       icon: Award,
-      title: 'Recognized Credentials',
-      description: 'Certificates and diplomas recognized nationally and internationally'
+      title: 'TVETA Accredited',
+      description: 'All programs accredited by Technical and Vocational Education and Training Authority'
     },
     {
       icon: Clock,
       title: 'Flexible Learning',
-      description: 'Full-time, part-time, and online learning options available'
+      description: 'Full-time, part-time, and short course options to fit your schedule'
+    },
+    {
+      icon: GraduationCap,
+      title: 'Industry Partnerships',
+      description: 'Strong connections with leading media houses and corporations for internships'
+    },
+    {
+      icon: Globe,
+      title: 'Global Recognition',
+      description: 'Internationally recognized certificates and diplomas for global opportunities'
     }
   ];
 
@@ -107,13 +165,13 @@ const Academics = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
             <div className="p-8 md:p-16 max-w-xl">
-              <Badge className="mb-4 bg-accent text-primary">Programs</Badge>
+              <Badge className="mb-4 bg-accent text-primary">TVETA Accredited</Badge>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">World-Class Media Education</h3>
               <p className="text-white/90 text-lg mb-6">
                 Our programs are designed with input from industry leaders to ensure graduates are ready for the demands of the modern media landscape.
               </p>
               <Button className="bg-white text-primary hover:bg-white/90">
-                View All Programs
+                Download Prospectus
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -121,7 +179,7 @@ const Academics = () => {
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => (
             <Card key={index} className="p-8 text-center hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -143,7 +201,7 @@ const Academics = () => {
                   <p className="text-muted-foreground">Duration: {program.duration}</p>
                 </div>
                 <Button variant="outline" className="hidden md:flex">
-                  View All Courses
+                  View Requirements
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -177,6 +235,39 @@ const Academics = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Admission Requirements */}
+        <div className="mt-20">
+          <Card className="p-8 bg-white rounded-xl">
+            <h3 className="text-3xl font-semibold text-primary text-center mb-8">Admission Requirements</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <h4 className="text-xl font-semibold text-primary mb-4">Diploma Programs</h4>
+                <ul className="text-gray-600 space-y-2">
+                  <li>KCSE Mean Grade of C- and above</li>
+                  <li>Relevant Certificate Course</li>
+                  <li>Equivalent qualifications</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h4 className="text-xl font-semibold text-primary mb-4">Certificate Programs</h4>
+                <ul className="text-gray-600 space-y-2">
+                  <li>KCSE Mean Grade of D+ and above</li>
+                  <li>KCE Division III and above</li>
+                  <li>Equivalent qualifications</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <h4 className="text-xl font-semibold text-primary mb-4">Short Courses</h4>
+                <ul className="text-gray-600 space-y-2">
+                  <li>Basic literacy</li>
+                  <li>Interest in the field</li>
+                  <li>No formal requirements</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* CTA Section */}

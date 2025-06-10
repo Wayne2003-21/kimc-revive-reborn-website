@@ -20,14 +20,23 @@ const Header = () => {
     { 
       label: 'About', 
       href: '#about',
-      submenu: ['History', 'Vision & Mission', 'Leadership', 'Campus']
+      submenu: ['History', 'Vision & Mission', 'Leadership', 'Campus Facilities', 'Quality Assurance']
     },
     { 
       label: 'Academics', 
       href: '#academics',
-      submenu: ['Diploma Courses', 'Certificate Courses', 'Short Courses', 'Online Learning']
+      submenu: ['Diploma Courses', 'Certificate Courses', 'Short Courses', 'Online Learning', 'Academic Calendar']
     },
-    { label: 'Admissions', href: '#admissions' },
+    { 
+      label: 'Admissions', 
+      href: '#admissions',
+      submenu: ['How to Apply', 'Entry Requirements', 'Fees Structure', 'Scholarships', 'International Students']
+    },
+    { 
+      label: 'Student Life', 
+      href: '#student-life',
+      submenu: ['Campus Life', 'Clubs & Societies', 'Sports', 'Accommodation', 'Student Support']
+    },
     { label: 'News & Events', href: '#news' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -43,32 +52,32 @@ const Header = () => {
             <img 
               src="https://kimc.ac.ke/wp-content/themes/kimc-main/assets/images/logo.png" 
               alt="KIMC Logo" 
-              className="h-14 w-auto" 
+              className="h-12 w-auto" 
             />
             <div className="hidden md:block">
-              <h1 className="text-xl font-bold text-primary">KIMC</h1>
-              <p className="text-sm text-muted-foreground">Kenya Institute of Mass Communication</p>
+              <h1 className="text-lg font-bold text-primary">KIMC</h1>
+              <p className="text-xs text-muted-foreground">Kenya Institute of Mass Communication</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <a
                   href={item.href}
-                  className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className="flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm"
                 >
                   <span>{item.label}</span>
                   {item.submenu && <ChevronDown className="w-4 h-4" />}
                 </a>
                 {item.submenu && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     {item.submenu.map((subItem) => (
                       <a
                         key={subItem}
                         href="#"
-                        className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors"
+                        className="block px-4 py-3 text-sm text-foreground hover:text-primary hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg transition-colors"
                       >
                         {subItem}
                       </a>
@@ -80,11 +89,11 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+          <div className="hidden md:flex items-center space-x-3">
+            <Button variant="outline" size="sm" className="text-sm">
               Student Portal
             </Button>
-            <Button size="sm" className="gradient-kimc">
+            <Button size="sm" className="gradient-kimc text-sm">
               Apply Now
             </Button>
           </div>
@@ -112,11 +121,11 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="px-4 py-3 space-y-2">
-                <Button variant="outline" size="sm" className="w-full">
+              <div className="px-4 py-3 space-y-2 border-t mt-2">
+                <Button variant="outline" size="sm" className="w-full text-sm">
                   Student Portal
                 </Button>
-                <Button size="sm" className="w-full gradient-kimc">
+                <Button size="sm" className="w-full gradient-kimc text-sm">
                   Apply Now
                 </Button>
               </div>

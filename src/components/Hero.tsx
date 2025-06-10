@@ -7,8 +7,8 @@ import { Card } from '@/components/ui/card';
 const Hero = () => {
   const stats = [
     { icon: Users, value: '5000+', label: 'Students' },
-    { icon: Award, value: '50+', label: 'Years of Excellence' },
-    { icon: BookOpen, value: '25+', label: 'Programs' },
+    { icon: Award, value: '62+', label: 'Years of Excellence' },
+    { icon: BookOpen, value: '15+', label: 'Programs' },
   ];
 
   return (
@@ -33,14 +33,14 @@ const Hero = () => {
 
             {/* Main heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
-              Shaping Future
-              <span className="block text-accent"> Media Leaders</span>
+              Kenya Institute of 
+              <span className="block text-accent">Mass Communication</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-fade-in max-w-2xl">
-              Join Kenya's leading institution for mass communication, journalism, and media studies. 
-              Excellence in education since 1961.
+              Transforming lives through quality, relevant and accessible training in mass communication 
+              and related fields. Excellence in media education since 1961.
             </p>
 
             {/* CTA Buttons */}
@@ -55,7 +55,7 @@ const Hero = () => {
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Watch Campus Tour
+                Virtual Campus Tour
               </Button>
             </div>
           </div>
